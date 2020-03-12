@@ -108,16 +108,32 @@ navColor.forEach(navBar => {
   navBar.style.textDecoration = "none";
   navBar.style.fontWeight = "bold";
 });
+
 // ADD NAV ITEM
-const a = document.createElement("a");
+
+//create a tag
+const aTag = function(text, href) {
+  const a = document.createElement("a");
+  a.innerHTML = text;
+  a.style.color = "green";
+  a.style.fontWeight = "bold";
+  a.style.textDecoration = "none";
+  a.setAttribute("href", href);
+  return a;
+};
+//append a tag to nav
 const nav = document.querySelector("nav");
-a.innerHTML = "Rules";
-a.style.color = "green";
-a.style.fontWeight = "bold";
-nav.appendChild(a);
+nav.appendChild(aTag("Rules", "#"));
 
 //ADJUST ALL Ps FONT SIZE
 const fontSize = document.querySelectorAll("p");
 fontSize.forEach(font => {
   font.style.fontSize = ".8rem";
+});
+
+button.addEventListener("click", function() {
+  let tagText = prompt("please enter tag text");
+  nav.appendChild(aTag(tagText, "#"));
+  let h1Text = prompt("Please enter a new h1 text");
+  h1.innerHTML = h1Text;
 });
