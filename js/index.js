@@ -52,8 +52,8 @@ img.src = "../img/header-img.png";
 
 // ADD NAV TEXT
 const nav_link = document.querySelectorAll("a");
-nav_link[0].innerHTML = siteContent["nav"]["nav-item-1"];
-nav_link[1].innerHTML = siteContent["nav"]["nav-item-2"];
+nav_link[0].innerHTML = siteContent.nav["nav-item-1"];
+nav_link[1].innerHTML = siteContent.nav["nav-item-2"];
 nav_link[2].innerHTML = siteContent["nav"]["nav-item-3"];
 nav_link[3].innerHTML = siteContent["nav"]["nav-item-4"];
 nav_link[4].innerHTML = siteContent["nav"]["nav-item-5"];
